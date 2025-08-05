@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Product Page</title>
+    <link rel="stylesheet" href="./idp/css/style.css">
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    padding: 20px;
+}
+.image-gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.image-gallery img {
+    width: 50%;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.main-image {
+    flex: 2;
+    margin-right: 20px;
+}
+.main-image img {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+.details {
+    flex: 3;
+}
+.details h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+.price {
+    font-size: 28px;
+    color: #388e3c;
+    margin: 10px 0;
+}
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.discount {
+    color: #ff5252;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.offers {
+    margin: 20px 0;
+}
+.offers p {
+    margin: 5px 0;
+    color: #333;
+}
+.offers p span {
+    color: #388e3c;
+    font-weight: bold;
+}
+.buy-options {
+    display: flex;
+    align-items: center;
+}
+.buy-options button {
+    background-color: #ff9f00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.buy-options #b2:hover{
+    transform: scale(1.1);
+}
+.buy-options #b1:hover{
+    transform: scale(1.1);
+}
+.exchange {
+    margin-top: 20px;
+}
+.exchange p {
+    margin: 5px 0;
+}
+.warranty {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="image-gallery">
+        <img src="./idp/img/sample1.jpg" alt="sample 1">
+        <img src="./idp/img/sample2.jpg" alt="sample 2">
+        <img src="./idp/img/sample2.jpg" alt="sample 3">
+        
+    </div>
+
+    <div class="main-image">
+        <img src="shopping/assets/img2/m1.webp" alt="Main Product Image">
+    </div>
+
+    <div class="details">
+        <h1>Men's Casual Shirt</h1>
+        <p>A stylish casual shirt perfect for everyday wear.</p>
+        <div class="price">
+            ₹499 
+            <span class="old-price">₹1,999</span>
+            <span class="discount">21% off</span>
+        </div>
+        <div class="offers">
+            <p><span>Bank Offer:</span> 5% Unlimited Cashback on Flipkart Axis Bank Credit Card</p>
+            <p><span>Bank Offer:</span> ₹50 Off On All Banks Credit and Debit Card Transactions</p>
+            <p><span>Bank Offer:</span> ₹100 Off On HDFC Bank Debit Card Transactions</p>
+        </div>
+        <div class="buy-options">
+            <button id="b1">Add to Cart</button>
+            <button id ="b2">Buy Now</button>
+        </div>
+        <div class="exchange">
+            <p><storng>NO </storng>return service are available on this product</p>
+        </div>
+        <div class="warranty">
+            <p>5 Months Warranty for this  shirt.</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./shopping/assets/css/style.css">
+    <style>
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .cart-item img {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .cart-item-details {
+            flex: 1;
+        }
+        #cart-items {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <div>
+            <div class="img">
+                <img src="./shopping/assets/css/img/fs-removebg-preview.jpg" width="80px" height="80px" alt="">
+            </div>
+            <div id="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            <div>
+                <ul id="nav">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="contact.html">Customize</a></li> 
+                    <li><a href="about us.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li> 
+                    <li id="cart">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <span id="cart-badge">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="cart">
+        <h1>Your Cart</h1>
+        <div id="cart-items">
+            <!-- Cart items will be inserted here -->
+        </div>
+        <button id="checkout">Proceed to Checkout</button>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cartItemsContainer = document.getElementById('cart-items');
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            function loadCartItems() {
+                cartItemsContainer.innerHTML = '';
+                if (cartItems.length === 0) {
+                    cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+                    return;
+                }
+
+                cartItems.forEach(itemId => {
+                    // In a real application, you would fetch item details from a database
+                    // For demonstration purposes, here's a mock data
+                    const item = {
+                        id: itemId,
+                        image: `./shopping/assets/css/img/${itemId}.jpeg`, // Mock image URL
+                        name: `Product ${itemId}`,
+                        price: `₹${itemId * 1000}` // Mock price
+                    };
+                    
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('cart-item');
+                    itemDiv.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-details">
+                            <h3>${item.name}</h3>
+                            <p>${item.price}</p>
+                        </div>
+                    `;
+                    cartItemsContainer.appendChild(itemDiv);
+                });
+            }
+
+            loadCartItems();
+        });
+    </script>
+</body>
+</html>

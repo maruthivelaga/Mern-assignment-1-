@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f9;
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.customization-panel {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+select {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#recommend-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.preview-panel {
+    margin-top: 30px;
+}
+
+#outfit-canvas {
+    border: 2px solid #ccc;
+    background-image: url('default-outfit.jpg'); /* Default outfit image */
+    background-size: cover;
+}

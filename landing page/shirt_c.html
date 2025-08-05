@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outfit Customization</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.fabric-selector {
+    flex: 1;
+}
+
+.fabric-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.fabric {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.fabric:hover {
+    transform: scale(1.05);
+}
+
+.fabric img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.fabric p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.shirt-preview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.shirt-preview h2 {
+    margin-bottom: 20px;
+}
+
+#shirt-image {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.next-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.next-button:hover {
+    background-color: darkorange;
+}
+
+  </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fabric-selector">
+            <h2>Select Fabric</h2>
+            <div class="fabric-options">
+                <div class="fabric" data-fabric="fabric1.jpg">
+                    <img src="shopping/assets/img3/1725_huge_c300.jpg" alt="Fabric 1">
+                    <p>Poplin - Cobalt Blue</p>
+                </div>
+                <div class="fabric" data-fabric="fabric2.jpg">
+                    <img src="shopping/assets/img3/1840_huge_c300.jpg" alt="Fabric 2">
+                    <p>Oxford - Light Blue</p>
+                </div>
+                <div class="fabric" data-fabric="fabric3.jpg">
+                    <img src="shopping/assets/img3/2738_huge_c300.jpg" alt="Fabric 3">
+                    <p>Cotton - Deep Blue</p>
+                </div>
+                <!-- Add more fabric options here -->
+            </div>
+        </div>
+        <div class="shirt-preview">
+            <h2>Your Custom Shirt</h2>
+            <img id="shirt-image" src="shopping/assets/img3/Screenshot 2024-10-01 135017.png" alt="Shirt Preview">
+            <button class="next-button">Next</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to change shirt fabric on click
+document.querySelectorAll('.fabric').forEach(fabricElement => {
+    fabricElement.addEventListener('click', function() {
+        const selectedFabric = this.getAttribute('data-fabric');
+        document.getElementById('shirt-image').src = selectedFabric;
+    });
+});
+
+    </script>
+</body>
+</html>

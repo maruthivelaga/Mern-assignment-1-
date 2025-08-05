@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Outfit Customization</title>
+   <style>
+    /* Resetting default margin and padding for a clean slate */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+   /* padding: 20px; */
+    background-color: #060708;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); */
+    height: 85px; 
+    position: sticky;
+    left: 0;
+    top: 0;   
+   
+}
+#search-bar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 30px;
+    margin-bottom: 10px;
+    margin-left: 250px;
+
+    
+
+}
+
+#search-bar input[type="text"] {
+    padding: 10px;
+    border:none;
+    border-radius: 4px  0 4px;
+    outline: none;
+    background-color:rgb(247, 243, 243);
+    color: rgb(10, 6, 6);
+    width: 500px;
+    
+
+}
+
+#search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #555;
+    color: rgb(248, 244, 244);
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    
+}
+
+#search-bar button:hover {
+    background-color: #444;
+}
+
+#nav{
+    display: flex;  
+    justify-content:flex-end;  
+    height: 50px;
+    position:absolute;
+    top: 10px;
+    margin-left:1000px ;
+
+}
+
+#logo{
+    color: white;
+    padding: 30px 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#logo p{
+   margin-left: 13px;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+ 
+}
+
+
+#nav li{
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    margin-left: 15px; 
+    margin-top: 20px;
+    
+    
+}
+#nav li a{
+    text-decoration: none;
+    font-size: large;
+    color: rgb(251, 250, 250);
+    transition: 0.3s ease;
+}
+
+/* General styling */
+/* body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    overflow-x: hidden;
+} */
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Styling the banner section */
+.banner-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+     z-index: 10;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    z-index: 10;
+
+
+}
+
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Styling the buttons on the banners */
+.banner-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #ff5733;
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Custom button section */
+.custom-button-section {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.custom-btn {
+    background-color: #ff5733;
+    color: white;
+    padding: 1rem 2.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #c0392b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer styling */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    position: relative;
+    margin-top: 3rem;
+}
+
+footer p {
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+   </style>
+</head>
+<body>
+    <section id="header">
+        <div>
+            <div class="img">
+                <img src="./shopping/assets/css/img/fs-removebg-preview.jpg" width="80px" height="80px" alt="">
+            </div>
+            <div id="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            <div>
+                <ul id="nav">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="contact.html">Customize</a></li> 
+                    <li><a href="about us.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li> 
+                    <li id="cart">
+                        <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <span id="cart-badge">0</span> <!-- Cart item count -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </header>
+
+    <main>
+        <section class="banner-section">
+            <div class="banner">
+                <img src="./shopping/assets/img3/12.jpg" alt="Men's Outfit" class="banner-image">
+                <button class="banner-btn" onclick="customize('men')">Men</button>
+            </div>
+            <div class="banner">
+                <img src="./shopping/assets/img2/flat.jpg" alt="Women's Outfit" class="banner-image">
+                <button class="banner-btn" onclick="customize('women')">Women</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Outfit Customization | Designed with ❤ by Sai Viswanth</p>
+    </footer>
+
+    <script>
+    function customize(gender) {
+        // Redirect to main.html when the button is clicked
+        window.location.href = "main.html";
+    }
+</script>
+</body>
+</html>

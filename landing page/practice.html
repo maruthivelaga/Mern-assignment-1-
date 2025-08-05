@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Outfit Customization</title>
+    <link rel="stylesheet" href="./stylep.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Customize Your Outfit</h1>
+        
+        <!-- Section for selecting fabric -->
+        <div class="customization-panel">
+            <label for="fabric">Choose Fabric:</label>
+            <select id="fabric-select">
+                <option value="fabric1.jpg">Cotton</option>
+                <option value="fabric2.jpg">Silk</option>
+                <option value="fabric3.jpg">Linen</option>
+            </select>
+
+            <label for="design">Choose Design:</label>
+            <select id="design-select">
+                <option value="design1.jpg">Floral</option>
+                <option value="design2.jpg">Stripes</option>
+                <option value="design3.jpg">Abstract</option>
+            </select>
+
+            <button id="recommend-btn">Get AI Recommendations</button>
+        </div>
+
+        <!-- Outfit Preview -->
+        <div class="preview-panel">
+            <h2>Outfit Preview</h2>
+            <canvas id="outfit-canvas" width="300" height="500"></canvas>
+        </div>
+    </div>
+
+    <script src="./scriptp.js"></script>
+</body>
+</html>
