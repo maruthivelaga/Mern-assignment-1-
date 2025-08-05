@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bill Payments Section</title>
+  <style>
+    body {
+      background: #fafbfc;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 16px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 2px 16px rgba(91, 106, 168, 0.08);
+    }
+    .section-title {
+      font-size: 21px;
+      font-weight: bold;
+      margin-bottom: 22px;
+    }
+    .services {
+      display: flex;
+      justify-content: flex-start;
+      gap: 42px;
+      margin-bottom: 35px;
+    }
+    .service {
+      text-align: center;
+      min-width: 100px;
+    }
+    .service-icon {
+      margin-bottom: 8px;
+      width: 36px;
+      height: 36px;
+    }
+    .service-label {
+      font-size: 15px;
+      color: #222;
+      margin-top: 6px;
+    }
+    .broadband-recharge {
+      display: flex;
+      align-items: center;
+      background: #064292;
+      border-radius: 40px;
+      padding: 24px 30px 24px 18px;
+      color: #fff;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+    .broadband-icon {
+      background: #fff;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+    .broadband-text {
+      flex: 1;
+    }
+    .broadband-text h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 0 0 7px 0;
+    }
+    .broadband-text p {
+      font-size: 18px;
+      margin: 0;
+      color: #cbe1ff;
+    }
+    .pay-now-btn {
+      background: #fff;
+      color: #064292;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      font-size: 21px;
+      font-weight: bold;
+      padding: 10px 36px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .pay-now-btn:hover {
+      background: #e5eeff;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      .services {
+        flex-direction: column;
+        gap: 22px;
+      }
+      .broadband-recharge {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .pay-now-btn {
+        align-self: stretch;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section-title">Bill Payments</div>
+    <div class="services">
+      <div class="service">
+        <img src="https://img.icons8.com/fluency/48/000000/light-on.png" class="service-icon" alt="Electricity">
+        <div class="service-label">Electricity Bill</div>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/fluency/48/000000/insurance.png" class="service-icon" alt="LIC">
+        <div class="service-label">LIC /<br>Insurance</div>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/color/48/000000/calendar--v2.png" class="service-icon" alt="Loan EMI">
+        <div class="service-label">Loan EMI<br>Payment</div>
+      </div>
+      <div class="service">
+        <img src="https://img.icons8.com/fluency/48/000000/apps-tab.png" class="service-icon" alt="View All">
+        <div class="service-label">View All<br>Products</div>
+      </div>
+    </div>
+
+    <div class="broadband-recharge">
+      <span class="broadband-icon">
+        <img src="https://img.icons8.com/fluency/48/000000/internet.png" alt="Broadband" width="34">
+      </span>
+      <span class="broadband-text">
+        <h2>Broadband Recharge</h2>
+        <p>Bill due? Pay now &amp; get rewarded</p>
+      </span>
+      <button class="pay-now-btn">Pay Now &rarr;</button>
+    </div>
+  </div>
+</body>
+</html>
